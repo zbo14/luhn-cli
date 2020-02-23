@@ -1,0 +1,42 @@
+{
+  "name": "luhn-cli",
+  "version": "1.0.0",
+  "description": "A CLI to verify and generate numbers compliant with the Luhn algorithm",
+  "bin": "bin/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zbo14/luhn-cli"
+  },
+  "scripts": {
+    "test": "nyc mocha --recursive --exit"
+  },
+  "keywords": [
+    "cli",
+    "credit-card",
+    "luhn-algorithm"
+  ],
+  "author": "Zachary Balder",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "mocha": "7.0.1",
+    "nyc": "15.0.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "reporter": [
+      "html",
+      "text"
+    ]
+  }
+}
